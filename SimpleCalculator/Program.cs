@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace SimpleCalculator
@@ -20,6 +21,8 @@ namespace SimpleCalculator
     {
       var catalog = new AggregateCatalog();
       catalog.Catalogs.Add(new AssemblyCatalog(typeof(Program).Assembly));
+      //Directory.CreateDirectory(@".\Extensions\");
+      catalog.Catalogs.Add(new DirectoryCatalog(@".\Extensions\"));
 
       _container = new CompositionContainer(catalog);
 
