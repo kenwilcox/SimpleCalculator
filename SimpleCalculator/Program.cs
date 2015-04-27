@@ -10,6 +10,8 @@ using System.Runtime.CompilerServices;
 
 namespace SimpleCalculator
 {
+  // Docs - https://msdn.microsoft.com/en-us/library/dd460648%28v=vs.110%29.aspx
+
   class Program
   {
     private CompositionContainer _container;
